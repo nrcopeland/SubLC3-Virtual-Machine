@@ -1,0 +1,32 @@
+Name: Nathaniel Copeland, Class: CSCI4200-Programming Languages, Instructor: Dr. Abi Salimi
+
+**********************************************************************
+
+File name: mySubLC3_Prog.txt
+; Display a sequence of numbers in reverse order
+; Initialize the values
+OUT "Enter the initial number:"
+IN number
+STO increment 2
+; Display the values
+OUT "The values are:"
+SUB tempNum number 1
+loopStart
+BRn tempNum loopEnd
+OUT number
+SUB number number increment
+SUB tempNum number 1
+JMP loopStart
+loopEnd
+PUT "H A V E A N I C E D A Y !"
+HALT
+
+**********************************************************************
+
+Enter the initial number:
+5
+The values are:
+5
+3
+1
+H A V E A N I C E D A Y !

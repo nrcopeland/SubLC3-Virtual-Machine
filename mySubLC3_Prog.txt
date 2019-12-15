@@ -1,0 +1,17 @@
+; Display a sequence of numbers in reverse order
+; Initialize the values
+OUT "Enter the initial number:"
+IN number
+STO increment 2
+; Display the values
+OUT "The values are:"
+SUB tempNum number 1
+loopStart
+BRn tempNum loopEnd
+OUT number
+SUB number number increment
+SUB tempNum number 1
+JMP loopStart
+loopEnd
+PUT "H A V E A N I C E D A Y !"
+HALT
